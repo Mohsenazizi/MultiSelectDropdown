@@ -1,0 +1,84 @@
+$radius: 8px;
+$selected_bg: #b6c0f5;
+$select_height: 50px;
+
+.multiSelectContainer {
+	display: flex;
+	border: 1px solid #ccc;
+	width: 100%;
+	height: $select_height;
+	gap: 8px;
+	background-color: #fff;
+	position: relative;
+	border-radius: $radius;
+	color: #333;
+	align-items: center;
+	box-sizing: border-box;
+	justify-content: space-between;
+	padding: 10px 15px;
+	cursor: pointer;
+	.titleContainers {
+		display: flex;
+		gap: 10px;
+		align-items: center;
+		div {
+			display: flex;
+			align-items: center;
+			background-color: $selected_bg;
+			border-radius: $radius;
+			padding: 5px 10px;
+			font-size: 0.8rem;
+		}
+	}
+	* {
+		box-sizing: border-box;
+	}
+	& > .expand {
+		display: grid;
+		width: 40px;
+		height: 40px;
+		place-content: center;
+		&.expanded {
+			transform: rotate(180deg);
+		}
+	}
+	ul {
+		width: 100%;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		display: none;
+		border-radius: $radius;
+		background-color: #fff;
+		padding: 10px;
+		cursor: auto;
+		margin-top: 8px;
+		max-height: 300px;
+		overflow-x: scroll;
+		border: 1px solid #ccc;
+		&.open {
+			display: block;
+		}
+		li {
+			padding: 10px 15px;
+			margin-bottom: 10px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			border-radius: $radius;
+			height: $select_height;
+			cursor: pointer;
+			&.selected {
+				background-color: $selected_bg;
+			}
+			.label {
+				display: flex;
+				align-items: center;
+				gap: 5px;
+			}
+		}
+	}
+}

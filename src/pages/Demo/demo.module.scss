@@ -1,0 +1,29 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	.card {
+		width: 40%;
+		min-height: 500px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		gap: 20px;
+	}
+	input {
+		box-sizing: border-box;
+		display: block;
+		width: 100%;
+		border-radius: 8px;
+		border: 1px solid transparent;
+		padding: 0.6em 1.2em;
+		font-size: 1em;
+		font-weight: 500;
+		font-family: inherit;
+		border: 1px solid #ccc;
+		transition: border-color 0.25s;
+	}
+}
